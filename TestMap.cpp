@@ -1,4 +1,5 @@
 #include "SequenceMap.h"
+#include <string>
 #include <cstdlib>
 #include <iterator>
 #include <vector>
@@ -9,6 +10,10 @@ using namespace std;
 int main() 
 {
 	SequenceMap a;
+<<<<<<< HEAD
+=======
+	SequenceMap b;
+>>>>>>> parent of 6874aa0... fix
 	cout << a.Empty() << endl;
 	
 

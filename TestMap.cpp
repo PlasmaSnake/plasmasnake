@@ -1,5 +1,4 @@
 #include "SequenceMap.h"
-#include <string>
 #include <cstdlib>
 #include <iterator>
 #include <vector>
@@ -9,9 +8,6 @@ using namespace std;
 
 int main() 
 {
-	SequenceMap a;
-	SequenceMap b;
-	cout << a.Empty() << endl;
 	
 
 

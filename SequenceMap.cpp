@@ -26,17 +26,18 @@ SequenceMap::SequenceMap(const pair<string, vector<string>> &set) : sequence_=se
 
 SequenceMap::~SequenceMap()
 {
-
+	delete sequence_;
+	delete enzyme_;
 } // End Destructor
 
-vector<string>  SequenceMap::Begin()
+vector<string> SequenceMap::Begin()
 {
 	return enzyme_[0];
 } // end Begin
 
 vector<string> SequenceMap::End()
 {
-	return sequence_set[sequence_set.Size()];
+	return enzyme_[enzyme_.Size()];
 } // end End
 
 int SequenceMap::Size()

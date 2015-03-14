@@ -28,13 +28,13 @@ public:
 	bool Erase(std::string &object);
 	bool Merge(SequenceMap other);
 	std::string& operator[] (const std::string& key);
-	bool operator< (const std::string& rhs);
+	bool operator< (const SequenceMap &rhs);
 	std::string First();
 	std::vector<std::string> Second();
 
 private:
-	std::string data_;
-	std::vector<std::string> data_set_;
+	std::string sequence_;
+	std::vector<std::string> enzyme_;
 };
 
 #endif

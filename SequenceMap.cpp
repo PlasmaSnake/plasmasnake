@@ -12,15 +12,15 @@
 #include <vector>
 #include <string> 		
 
-SequenceMap::SequenceMap() : data_ = "", data_set_
+SequenceMap::SequenceMap() : sequence_ = "", enzyme_
 {
 } // End Constructor
 
-SequenceMap::SequenceMap(const string &item) : data_ = item, data_set_
+SequenceMap::SequenceMap(const string &item) : sequence_ = item, enzyme_
 {
 } // End copy Constructor
 
-SequenceMap::SequenceMap(const pair<string, vector<string>> &set) : data_=set.first(), data_set_=set.second()
+SequenceMap::SequenceMap(const pair<string, vector<string>> &set) : sequence_=set.first(), enzyme_=set.second()
 {
 } // End pair copy constructor
 
@@ -29,19 +29,19 @@ SequenceMap::~SequenceMap()
 
 } // End Destructor
 
-vector<string> SequenceMap::Begin()
+vector<string>  SequenceMap::Begin()
 {
-	return data_set_[0];
+	return enzyme_[0];
 } // end Begin
 
 vector<string> SequenceMap::End()
 {
-	return data_set[data_set.Size()];
+	return sequence_set[sequence_set.Size()];
 } // end End
 
 int SequenceMap::Size()
 {
-	return data_set_.size_;
+	return enzyme_.size_;
 } // end Size
 
 bool SequenceMap::Empty()
@@ -71,7 +71,7 @@ SequenceMap SequenceMap::Find(const string& object) // need to fix
 		if (object == this->Second()[i]) return this; 
  	} // end for
 
-	return itr; // Should return nothing;
+	return itr; // Should return nothing.;
 } // end Find
 
 bool SequenceMap::Erase(string &object)
@@ -82,7 +82,7 @@ bool SequenceMap::Erase(string &object)
 
 bool SequenceMap::Merge(SequenceMap other)
 {
-	// if insert finds dupe, merge with other map
+	// if insert finds dupe, merge with other map.
 
 	return false;
 } // end Merge
@@ -90,26 +90,25 @@ bool SequenceMap::Merge(SequenceMap other)
 string& SequenceMap::operator[] (const string& key)
 {
 	if (this->Find(key) == this->End()) 
-		{ // If key does not exist, it creates one
+		{ // If key does not exist, it creates one.
 			this->Insert(key);
 			return ;
 		}
 	
 } // end operator[]
 
-bool SequenceMap:: operator < (const SequenceMap &rhs)
+bool SequenceMap:: operator< (const SequenceMap& rhs)
 { // Checks if rhs is equal to a private member of the object
-	if (this->data_ == rhs.data_) 
-		return true;
+	if (this->sequence_ == rhs) return true;
 	return false;
 } // end operator<
 
 string SequenceMap::First()
 {
-	return data_;
+	return sequence_;
 } //end First
 
 vector<string> SequenceMap::Second()
 {
-	return data_set_;
+	return enzyme_;
 } // end Second

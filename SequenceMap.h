@@ -5,6 +5,7 @@
 #ifndef SEQUENCE_MAP_H
 #define SEQUENCE_MAP_H
 
+#include "SequenceMap.cpp"
 #include <iostream>
 #include <cstdlib>
 #include <iterator>

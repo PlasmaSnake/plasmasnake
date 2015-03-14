@@ -5,8 +5,13 @@
 #include <vector>
 #include <string> 
 
+using namespace std;
+
 int main() 
 {
+	SequenceMap a;
+	SequenceMap b;
+	cout << a.Empty() << endl;
 	
 
 

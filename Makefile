@@ -42,11 +42,20 @@ PROGRAM_0=TestParse
 $(PROGRAM_0): $(ALL_OBJ0)
 	g++ $(C++FLAG) -o $(EXEC_DIR)/$@ $(ALL_OBJ0) $(INCLUDES) $(LIBS_ALL)
 
+#FIRST PROGRAM
+ALL_OBJ1=TestMap.o
+PROGRAM_1=TestMap
+$(PROGRAM_1): $(ALL_OBJ1)
+	g++ $(C++FLAG) -o $(EXEC_DIR)/$@ $(ALL_OBJ1) $(INCLUDES) $(LIBS_ALL)
+
+
+
 
 #Compiling all
 
 all: 	
 	make $(PROGRAM_0)
+	make $(PROGRAM_1)
 
 
 #Clean obj files

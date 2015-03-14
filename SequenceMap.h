@@ -37,4 +37,6 @@ private:
 	std::vector<std::string> enzyme_;
 };
 
+#include "SequenceMap.cpp"
+
 #endif

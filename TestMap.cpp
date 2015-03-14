@@ -8,6 +8,8 @@ using namespace std;
 
 int main() 
 {
+	SequenceMap a;
+	cout << a.Empty() << endl;
 	
 
 
